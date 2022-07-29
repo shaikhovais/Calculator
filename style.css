@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    font-weight: normal;
+    font-family: 'Fredericka the Great', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Teko', sans-serif;
+}
+
+:root {
+    --background-color-1 : rgba(63,94,251,1);
+    --background-color-2 : rgba(252,70,107,1);
+    --button-color : rgb(252, 145, 166);
+    --button-shadow : rgba(252,70,107,0.8);
+    --output-screen : rgba(0, 0, 0, 0.65);
+    --font-color : black;
+    --output-font-current : rgb(252, 145, 166);
+    --output-font-previous : rgba(252,70,107,0.8);
+    --heading-color : black;
+}
+
+/*---------- Dark theme colors ----------*/
+.dark-theme {
+    --background-color-1 : rgba(24,134,84,1);
+    --background-color-2 : rgba(0,0,0,1);
+    --button-color : black;
+    --button-shadow : rgb(86, 162, 128);
+    --output-screen : rgba(0, 0, 0, 0.65);
+    --font-color : rgb(55, 249, 162);
+    --output-font-current : rgb(55, 249, 162);
+    --output-font-previous : rgb(46, 166, 112);
+    --heading-color : rgb(55, 249, 162);
+}
+
+body {
+    padding: 0%;
+    margin: 0%;
+    background: radial-gradient(circle, var(--background-color-1) 0%, var(--background-color-2) 100%);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.calculator {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    margin: 20px;
+    min-height: 80vh;
+    grid-template-columns: repeat(4, 60px);
+    grid-template-rows: 60px minmax(120px, auto) repeat(5,60px);
+    box-shadow:0px 0px 50px #000;
+    padding: 20px;
+    gap: 15px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.calculator h1 {
+    font-family: 'Fredericka the Great', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Teko', sans-serif;
+    font-size: 3rem;
+    margin: 0%;
+    padding: 0% 5px;
+    transition: 0s;
+    color : var(--heading-color)
+}
+
+.display-screen {
+    border-radius: 10px;
+    grid-column: 1 / -1;
+    background-color: var(--output-screen);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.display-screen .previous-operand {
+    color: var(--output-font-previous);
+    font-size: 1.5rem;
+    font-family: 'Fredericka the Great', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Teko', sans-serif;
+}
+
+.display-screen .current-operand {
+    color: var(--output-font-current);
+    font-size: 2.5rem;
+    font-family: 'Fredericka the Great', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Teko', sans-serif;
+}
+
+.calculator button {
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 2.5rem;
+    border: none;
+    outline: none;
+    background-color: var(--button-color);
+    transition: all 0.5s ease;
+    box-shadow: 0px 8px 0px var(--button-shadow), 0px 8px;
+    color: var(--font-color);
+}
+
+.calculator .delete {
+    font-size: 2rem;
+}
+
+.calculator button:active {
+    position: relative;
+    top: 5px;
+    box-shadow: none;
+    background-color: var(--button-color);
+}
+
+.calculator .span-two {
+    grid-column: span 2;
+}
+
+.theme {
+    display: flex;
+    flex-direction: column;
+    grid-column: 4 / 4;
+    justify-content: center;
+    align-items: center;
+}
+
+#toggleIcon {
+    grid-column: 4 / 4;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
