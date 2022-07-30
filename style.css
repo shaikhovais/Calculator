@@ -142,10 +142,6 @@ body {
 }
 
 @media(max-width:500px){
-    .calculator {
-        grid-template-columns: repeat(4, 40px);
-        grid-template-rows: 40px minmax(120px, auto) repeat(5,40px);
-    }
 
     .calculator button {
         font-size: 2rem;
