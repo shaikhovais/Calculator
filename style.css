@@ -140,3 +140,14 @@ body {
     width: 40px;
     cursor: pointer;
 }
+
+@media(max-width:500px){
+
+    .calculator button {
+        font-size: 2rem;
+    }
+
+    .calculator .delete {
+        font-size: 1.5rem;
+    }
+}
