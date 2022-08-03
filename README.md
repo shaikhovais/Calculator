@@ -1,4 +1,4 @@
-Click on this link to visit website =>> https://2theme-calculator.netlify.app/
+Click on this link to visit website => https://2theme-calculator.netlify.app/
 
 <--------------------------- 3D CALCULATOR WITH 2 DIFF THEMES (Light & Dark) -------------------------->
 
