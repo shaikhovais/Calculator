@@ -144,19 +144,6 @@ deleteButton.addEventListener('click', button  => {
     calculator.updateDisplay();
 })
 
-
-//------------------ Logic to change theme ----------------//
-const toggleBtn = document.getElementById("toggleIcon");
-
-toggleBtn.onclick = function (){
-    document.body.classList.toggle("dark-theme");
-    if(document.body.classList.contains("dark-theme")) {
-        toggleBtn.src = "images/sun.png";
-    } else {
-        toggleBtn.src = "images/moon.png";
-    }
-}
-
 //------------------ Adding 3d effects to buttons ----------------//
 const buttons = document.querySelectorAll('button');
 
@@ -168,3 +155,35 @@ buttons.forEach((button) => {
     
 })
 
+//------------------ Logic to change theme ----------------//
+const toggleBtn = document.getElementById("toggleIcon");
+const updateThemeImg = document.querySelector('.update-theme-img');
+const updateTheme = document.querySelector('.update-theme');
+
+function moveObject(value) {
+    updateThemeImg.style.transform = `translateY(${value})`;
+}
+
+function changedTheme() {
+    setTimeout(() => moveObject('0'), 0);
+    setTimeout(() => moveObject('100vh'), 800);
+    // setTimeout(() => backDrop.style.display = 'none', 3000);
+    setTimeout(() => updateTheme.style.display = 'none', 1500);
+};
+changedTheme()
+
+toggleBtn.onclick = function (){
+
+    document.body.classList.toggle("dark-theme");
+    if(document.body.classList.contains("dark-theme")) {
+        updateThemeImg.src = './images/moon.png';
+        updateTheme.style.display = 'flex';
+        changedTheme();
+        toggleBtn.src = "images/sun.png";
+    } else {
+        updateThemeImg.src = './images/sun.png';
+        updateTheme.style.display = 'flex';
+        changedTheme();
+        toggleBtn.src = "images/moon.png";
+    }
+}

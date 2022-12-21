@@ -35,6 +35,24 @@ body {
     padding: 0%;
     margin: 0%;
     background: radial-gradient(circle, var(--background-color-1) 0%, var(--background-color-2) 100%);
+    overflow: hidden;
+}
+
+
+.update-theme {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+.update-theme img {
+    transition: all 0.7s ease-in-out;
+    height: 250px;
+    transform: translateY(100vh);
 }
 
 .container {
