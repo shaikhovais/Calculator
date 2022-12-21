@@ -115,7 +115,7 @@ body {
     font-size: 2rem;
 }
 
-.calculator button:active {
+.clickedButton {
     position: relative;
     top: 5px;
     box-shadow: none;
