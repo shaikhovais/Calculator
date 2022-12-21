@@ -156,3 +156,15 @@ toggleBtn.onclick = function (){
         toggleBtn.src = "images/moon.png";
     }
 }
+
+//------------------ Adding 3d effects to buttons ----------------//
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach((button) => {
+    button.addEventListener('click', (e) => {
+        e.target.classList.add('clickedButton');
+        setTimeout(() => e.target.classList.remove('clickedButton') ,100)
+    })
+    
+})
+
